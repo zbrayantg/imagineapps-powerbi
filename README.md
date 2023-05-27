@@ -1,27 +1,39 @@
-# Dashboard
+# IMAGINE APPS - PRUEBA TÉCNICA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+## Requerimiento 1: Utilizar una fuente de datos pública y gratuita
+La fuente de datos seleccionada para este proyecto es la API REST relacionada al COVID-19. La API proporciona información sobre los casos de COVID-19 en diferentes países. La URL de la API es: [https://disease.sh/v3/covid-19/countries](https://disease.sh/v3/covid-19/countries).
 
-## Development server
+## Requerimiento 2: Diseñar y crear un informe de Power BI
+El informe de Power BI fue creado utilizando Power BI Desktop. El informe contiene diferentes visualizaciones y dispone de tres páginas para un mejor analisis de la información (Resumen, Casos, Pruebas)
+El informe es interactivo, por lo que permite a los usuarios filtrar y seleccionar segmentos de datos, como continente, países específicos o rangos en los valores de casos o pruebas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Nota:** Se emplea un cuenta organizacional con licencia de prueba, sin embargo, lo recomdable sería disponer de una licencia completa.
 
-## Code scaffolding
+## Requerimiento 3: Publicar el informe en Power BI Service y configurar Power BI Embedded
+El informe fue publicado en Power BI Service para facilitar su acceso y compartirlo con otros usuarios. Se configuraron los permisos de acceso adecuados para el informe y se realizo la respectiva públicación para su posterior integración con la aplicación de Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requerimiento 4: Crear una aplicación Angular básica
+Se utilizó la CLI de Angular para crear una aplicación Angular básica. Se ejecutó el siguiente comando:
+```
+ng new imagineapps-powerbi
+```
+Esto generó la estructura inicial del proyecto de la aplicación Angular e inicializo el repositorio.
 
-## Build
+## Requerimiento 5: Implementar Power BI Embedded en la aplicación Angular
+Se procede con la generación de las credenciales y la url, para posteriormente realizar la respectiva incrustación del reporte en la aplicación Angular.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Requerimiento 6: Documentación de configuración y despliegue
+Teniendo en cuenta que las necesidades de la aplicación no demandan recursos considerables en cuanto hardware e infraestructura, se procede a desplegar la aplicación mediante **GitHub Pages** para lo cual, se procede a crear una nueva rama, con el siguiente comando
 
-## Running unit tests
+```
+git checkout -b gh-pages
+```
+Se procede a eliminar realizar el build de la aplicación
+```
+npm run deploy
+```
+Posteriormente, se extre eliminan todos los archivos de esta rama, exceptuando los generados en el build. `/dist`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Se procede a actualizar el repositorio remoto y GitHub Actions realiza el despliegue.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La aplicación se encuentra disponible en [https://zbrayantg.github.io/imagineapps-powerbi/](https://zbrayantg.github.io/imagineapps-powerbi/)
